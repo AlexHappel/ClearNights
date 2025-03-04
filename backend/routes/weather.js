@@ -28,8 +28,8 @@ router.get('/', async (req, res) => {
         });
 
         const weatherData = response.data;
-        // Define clear night as less than 10% cloud cover (customize as needed)
-        const isClearNight = weatherData.clouds && weatherData.clouds.all < 10;
+        // Define clear night as less than 40% cloud cover (customize as needed)
+        const isClearNight = weatherData.clouds && weatherData.clouds.all < 40;
 
         res.json({ data: weatherData, clearNight: isClearNight });
     } catch (error) {
