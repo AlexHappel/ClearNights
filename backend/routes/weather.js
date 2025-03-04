@@ -17,7 +17,7 @@ router.get('/', async (req, res) => {
             params.lat = lat;
             params.lon = lon;
         } else if (location) {
-            .
+            
             params.q = location; 
         } else {
             return res.status(400).json({ error: 'Missing required location parameters' });
